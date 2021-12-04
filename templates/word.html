@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/stylesword.css">
+</head>
+<body>
+<div class="wrap">
+   <div class="search">
+     <form action="word">
+      <input type="text" name="search" class="searchTerm" placeholder="Input Your Word Here">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+    </form>
+  </div>
+   
+  <h3>Meaning: {{meaning}}</h3>
+  <!-- using for loop to iterate thorugh -->
+  <h3>Synonyms: {% for synonym in synonyms %}
+      {{synonym}},
+      {% endfor %}</h3>
+  
+  
+  <h3>Antonyms: {% for antonym in antonyms %}
+      {{antonym}},
+      {% endfor %}</h3>
+  
+</div>
+</body>
+</html>
